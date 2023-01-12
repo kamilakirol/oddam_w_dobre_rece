@@ -1,0 +1,141 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+
+  @include tablet {
+    box-shadow: none;
+  }
+
+  &_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 37px 0;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &_login_menu {
+      display: flex;
+      font-size: 13px;
+
+      &_item {
+        padding: 9px;
+        text-decoration: none;
+        color: $color-text;
+        border: 1px solid transparent;
+        margin-right: 5px;
+
+        &:hover {
+          border: 1px solid #FAD648;
+        }
+      }
+    }
+    &_nav {
+      &_menu {
+        box-shadow: 0 5px 90px rgba(57, 63, 72, 0.3);
+
+
+        @include tablet {
+          box-shadow: none;
+        }
+      }
+
+      .menu_btn {
+        display:none;
+        @media (max-width: $width-m-max) {
+          &:checked {
+            ~ .header_box_nav_menu {
+              background-color: rgba(255, 255, 255);
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              right: 0;
+              align-items: center;
+              margin-left: -15px;
+              margin-right: -15px;
+
+              li {
+                text-align: center;
+                padding: 20px;
+                width: 100vw;
+
+                &:hover {
+                  background-color: rgba(255, 255, 237);
+                }
+              }
+            }
+
+            ~ .hamburger .menu_toggle {
+              .bar {
+                &:nth-child(1) {
+                  transform: rotate(45deg) translate(4.5px, 4px);
+                }
+                &:nth-child(2) {
+                  opacity: 0;
+                }
+                &:nth-child(3) {
+                  transform: rotate(-45deg) translate(4.5px, -4px);
+                }
+              }
+            }
+          }
+        }
+      }
+      .hamburger {
+        display: block;
+        cursor:pointer;
+        margin-right: 15px;
+
+        .bar {
+          display: block;
+          width: 20px;
+          height: 3px;
+          margin-bottom: 3px;
+          background-color: $color-main;
+          transition: .3s all ease-in-out;
+        }
+      }
+
+      &_menu {
+        display: none;
+
+        li {
+          cursor: pointer;
+
+        }
+      }
+
+      @include tablet {
+        width: 100%;
+        margin-top: 17px;
+
+        .hamburger {
+          display: none;
+        }
+
+        &_menu {
+          display: flex;
+          justify-content: flex-end;
+          color: $color-main;
+
+          li {
+            margin-left: 15px;
+            padding: 9px 20px;
+            border: 1px solid transparent;
+
+            &:hover {
+              border: 1px solid $color-main;
+            }
+          }
+        }
+      }
+    }
+  }
+}

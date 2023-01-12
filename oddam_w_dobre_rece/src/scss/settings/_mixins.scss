@@ -1,0 +1,17 @@
+@mixin notebook {
+  @media (min-width: $width-xxl) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $width-m) {
+    @content
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $width-s) {
+    @content
+  }
+}
