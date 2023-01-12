@@ -1,24 +1,27 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import {Link as LinkScroll} from "react-scroll"
+import React, {useState} from 'react';
+import HomeNavItem from "./HomeNavItem";
+import HomeLoginItem from "./HomeLoginItem";
 
 const HomeHeader = () => {
+    const [isMenuActive, setIsMenuActive] = useState(false);
+    const menu = [{to: 'banner', text: 'Start'},
+        {to: 'steps', text: 'O co chodzi?', offset: -90},
+        {to: 'aboutUs', text: 'O nas'},
+        {to: 'fundations', text: 'Fundacje i organizacje'},
+        {to: 'contact', text: 'Kontakt'}];
+
     return (
         <header className='header'>
             <div className='container'>
                 <div className='header_box'>
                     <nav className='header_box_login'>
                         <ul className='header_box_login_menu'>
-                            <li>
-                                <Link className='header_box_login_menu_item' to='logowanie'>Zaloguj</Link>
-                            </li>
-                            <li>
-                                <Link className='header_box_login_menu_item' to='rejestracja'>Załóż konto</Link>
-                            </li>
+                            <HomeLoginItem to='logowanie' text='Zaloguj'/>
+                            <HomeLoginItem to='rejestracja' text='Załóż konto'/>
                         </ul>
                     </nav>
                     <nav className='header_box_nav'>
-                        <input type='checkbox' className='menu_btn' id='menu_btn'/>
+                        <input type='checkbox' className={`menu_btn ${isMenuActive ? 'active': ''} `} id='menu_btn' onClick={()=> setIsMenuActive(!isMenuActive)}/>
                         <div className='hamburger'>
                             <label htmlFor='menu_btn' className='menu_toggle'>
                                 <span className='bar'></span>
@@ -27,31 +30,9 @@ const HomeHeader = () => {
                             </label>
                         </div>
                         <ul className='header_box_nav_menu'>
-                            <li>
-                                <LinkScroll className='header_box_nav_menu_link' activeClass="active" to='start' >
-                                    Start
-                                </LinkScroll>
-                            </li>
-                            <li>
-                                <LinkScroll className='header_box_nav_menu_link' activeClass="active" to='info'>
-                                    O co chodzi?
-                                </LinkScroll>
-                            </li>
-                            <li>
-                                <LinkScroll className='header_box_nav_menu_link' activeClass="active" to='aboutUs'>
-                                    O nas
-                                </LinkScroll>
-                            </li>
-                            <li>
-                                <LinkScroll className='header_box_nav_menu_link' activeClass="active" to='fundations'>
-                                    Fundacje i organizacje
-                                </LinkScroll>
-                            </li>
-                            <li>
-                                <LinkScroll className='header_box_nav_menu_link' activeClass="active" to='contact'>
-                                    Kontakt
-                                </LinkScroll>
-                            </li>
+                            {menu.map(item => {
+                                return <HomeNavItem key={item.text} to={item.to} text={item.text} offset={item.offset} setIsMenuActive={setIsMenuActive}/>
+                            })}
                         </ul>
                     </nav>
                 </div>

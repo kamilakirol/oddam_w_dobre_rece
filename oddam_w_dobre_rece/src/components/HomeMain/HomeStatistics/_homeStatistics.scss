@@ -5,12 +5,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 46px;
 
     &_item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 46px;
 
       &_num {
         font-size: 60px;
@@ -19,14 +19,15 @@
 
       &_title {
         font-size: 18px;
-        margin-bottom: 28px;
+        margin-bottom: 20px;
         text-align: center;
       }
 
       &_text {
         text-align: center;
         max-width: 400px;
-        margin-bottom: 26px;
+        margin-bottom: 56px;
+        font-family: $font-alt;
       }
     }
 
@@ -37,12 +38,16 @@
       &_item {
 
         &_num {
-          font-size: 90px;
+          font-size: 60px;
+
+          @media (min-width: $width-xl) {
+            font-size:90px;
+          }
         }
 
         &_title {
           width: 190px;
-          line-height: 1.3;
+          line-height: 1.5;
 
           @media (min-width: $width-xl) {
             width: 320px;

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 const HomeBanner = () => {
     return (
-        <section className='banner'>
+        <section id='banner' className='banner'>
             <div className='container banner_container'>
                 <div className='banner_img'></div>
                 <div className='banner_box'>

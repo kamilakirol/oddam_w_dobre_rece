@@ -39,7 +39,6 @@
       &_menu {
         box-shadow: 0 5px 90px rgba(57, 63, 72, 0.3);
 
-
         @include tablet {
           box-shadow: none;
         }
@@ -48,9 +47,9 @@
       .menu_btn {
         display:none;
         @media (max-width: $width-m-max) {
-          &:checked {
+          &.active {
             ~ .header_box_nav_menu {
-              background-color: rgba(255, 255, 255);
+              background-color: rgb(255, 255, 255);
               display: flex;
               flex-direction: column;
               position: absolute;
@@ -61,18 +60,25 @@
               margin-left: -15px;
               margin-right: -15px;
 
-              li {
-                text-align: center;
-                padding: 20px;
-                width: 100vw;
+              .header_box_nav_menu_item {
+
+                &_link {
+                  display: flex;
+                  justify-content: center;
+                  padding: 20px;
+                  width: 100vw;
+                  cursor: pointer;
+                }
 
                 &:hover {
-                  background-color: rgba(255, 255, 237);
+                  background-color: #fefeb1;
                 }
               }
             }
 
             ~ .hamburger .menu_toggle {
+              cursor: pointer;
+
               .bar {
                 &:nth-child(1) {
                   transform: rotate(45deg) translate(4.5px, 4px);
@@ -90,7 +96,6 @@
       }
       .hamburger {
         display: block;
-        cursor:pointer;
         margin-right: 15px;
 
         .bar {
@@ -105,11 +110,6 @@
 
       &_menu {
         display: none;
-
-        li {
-          cursor: pointer;
-
-        }
       }
 
       @include tablet {
@@ -125,13 +125,18 @@
           justify-content: flex-end;
           color: $color-main;
 
-          li {
+          &_item {
             margin-left: 15px;
-            padding: 9px 20px;
             border: 1px solid transparent;
+            cursor: pointer;
 
             &:hover {
               border: 1px solid $color-main;
+            }
+
+            &_link {
+              display: flex;
+              padding: 9px 20px;
             }
           }
         }
