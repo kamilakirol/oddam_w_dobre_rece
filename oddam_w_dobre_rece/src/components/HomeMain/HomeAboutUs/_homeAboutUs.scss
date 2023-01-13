@@ -1,0 +1,26 @@
+@import "HomeAboutUsBox/homeAboutUsBox";
+
+.aboutUs{
+  &_container {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &_img {
+    @include fullWidth;
+
+    @include tablet {
+     display: none;
+    }
+
+    @media (min-width: $width-xl) {
+      display: flex;
+      width: 50%;
+      flex-grow: 1;
+    }
+  }
+}

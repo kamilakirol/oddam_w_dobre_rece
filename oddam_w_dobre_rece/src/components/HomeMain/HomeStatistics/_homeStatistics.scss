@@ -1,11 +1,13 @@
 .statistics {
-  background-image:url("../../../assets/StatisticsImg.png");
 
   &_box {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 46px;
+
+    @include fullWidth;
+    background-image:url("../../../assets/StatisticsImg.png");
 
     &_item {
       display: flex;
