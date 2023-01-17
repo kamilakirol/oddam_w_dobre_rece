@@ -16,10 +16,6 @@ body {
     margin: 0 30px;
   }
 
-  @include matebook {
-    margin: 0 30px;
-  }
-
   @include  notebook {
     width: 1900px;
     margin: 0 auto;

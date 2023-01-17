@@ -1,0 +1,73 @@
+@import 'pagination';
+
+.foundationsListContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+
+  &_item {
+    width: 100%;
+    &:after {
+      content: "";
+      margin-top: 30px;
+      display: block;
+      height: 1px;
+      background-color: #707070;
+      width: 100%;
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+
+    &_box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+
+      &_info {
+        &_title {
+          font-size: 16px;
+          margin-bottom: 10px;
+
+          @media (min-width: $width-l){
+            font-size: 18px;
+          }
+        }
+
+        &_text {
+          font-size: 12px;
+          margin-bottom: 15px;
+        }
+      }
+
+      &_things {
+        font-size: 13px;
+        color:$color-text
+      }
+
+      @media (min-width: $width-l) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        &_info {
+          &_title {
+            font-size: 22px;
+          }
+
+          &_text {
+            font-size: 14px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+  }
+}

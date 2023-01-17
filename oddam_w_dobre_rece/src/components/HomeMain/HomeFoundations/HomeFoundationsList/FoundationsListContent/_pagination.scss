@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  margin-top: 40px;
+
+  &_item {
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &:nth-of-type(3) {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    &_link {
+      padding: 12px 10px;
+      border: 1px solid #707070;
+
+      &:hover {
+        cursor:pointer;
+        background-color: #fefeb1;
+      }
+    }
+  }
+}

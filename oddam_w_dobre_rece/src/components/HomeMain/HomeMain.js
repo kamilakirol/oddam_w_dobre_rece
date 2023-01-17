@@ -3,6 +3,7 @@ import HomeBanner from "./HomeBanner/HomeBanner";
 import HomeStatistics from "./HomeStatistics/HomeStatistics";
 import HomeSteps from "./HomeSteps/HomeSteps";
 import HomeAboutUs from "./HomeAboutUs/HomeAboutUs";
+import HomeFoundations from "./HomeFoundations/HomeFoundations";
 
 const HomeMain = () => {
     return (
@@ -11,6 +12,7 @@ const HomeMain = () => {
             <HomeStatistics/>
             <HomeSteps/>
             <HomeAboutUs/>
+            <HomeFoundations/>
         </>
     );
 };

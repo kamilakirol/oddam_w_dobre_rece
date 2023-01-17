@@ -4,23 +4,29 @@
   &_container {
     display: flex;
     flex-direction: column;
+    @include fullWidth;
 
     @include tablet {
       flex-direction: row;
     }
+
   }
 
   &_img {
-    @include fullWidth;
+    display: flex;
 
     @include tablet {
-     display: none;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: #F0F1F1;
     }
 
-    @media (min-width: $width-xl) {
-      display: flex;
-      width: 50%;
-      flex-grow: 1;
+    &_item {
+      width: 100%;
+      height: auto;
     }
   }
+
 }
+

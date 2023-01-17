@@ -5,9 +5,14 @@ import PeopleImg from "../../../assets/PeopleImg.jpg";
 const HomeAboutUs = () => {
     return (
         <section className='aboutUs'>
-            <div className='aboutUs_container container'>
-                <HomeAboutUsBox/>
-                    <img src={PeopleImg} alt='people' className='aboutUs_img'/>
+            <div className=' container'>
+                <div className="aboutUs_container">
+                    <HomeAboutUsBox/>
+                    <div className="aboutUs_img">
+                        <img src={PeopleImg} alt='people' className='aboutUs_img_item'/>
+                    </div>
+
+                </div>
             </div>
         </section>
     );

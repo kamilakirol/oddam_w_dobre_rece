@@ -1,0 +1,19 @@
+@import 'HomeFoundationsList/homeFoundationsList';
+
+.foundations {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_title {
+    font-size: 29px;
+    margin-top: 60px;
+    margin-bottom: 18px;
+
+    @include tablet {
+      font-size: 34px;
+    }
+  }
+}
