@@ -1,8 +1,3 @@
-@keyframes glass {
-  from {left:-40px}
-  to {left:300px}
-}
-
 .banner {
   background-image: url("../../../assets/BannerImg.jpg");
   background-size: contain;
@@ -59,29 +54,13 @@
       text-align: center;
 
       &_btn {
-        background-color: white;
-        border: 1px solid $color-main;
         width: 40%;
         max-width: 300px;
-        position: relative;
-        overflow: hidden;
 
-        &:hover {
-          background-color: #fefeb1;
+        &::after {
+          left:-38%;
+          top:-12%;
         }
-
-        //&:hover::after {
-        //  position: absolute;
-        //  content: "";
-        //  width: 30px;
-        //  height: 86px;
-        //  background-color: pink;
-        //  left:-40px;
-        //  top:0;
-        //  animation-name: glass;
-        //  animation-duration: 1s;
-        //transform: rotate(20deg);
-        //}
 
         &:first-child {
           margin-right: 40px;

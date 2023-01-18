@@ -5,8 +5,6 @@
   width: 90%;
 
   &_button {
-    background-color: white;
-    border: 1px solid #3C3C3C;
     width: 35%;
     height: 50px;
 
@@ -15,8 +13,9 @@
       margin-left: 10px;
     }
 
-    &:hover {
-      background-color: #fefeb1;
+    &::after {
+      top: -25%;
+      left: -25%;
     }
 
     &_text {

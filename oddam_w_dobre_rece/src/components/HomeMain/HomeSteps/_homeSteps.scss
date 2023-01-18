@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
 
   &_title {
@@ -23,11 +22,10 @@
     margin-bottom: 50px;
 
     &_btn {
-      background-color: white;
-      border: 1px solid $color-main;
 
-      &:hover {
-        background-color: #fefeb1;
+      &::after {
+        left:-30%;
+        top:-15%;
       }
 
       &_link {
@@ -48,7 +46,7 @@
   align-items: center;
   padding-top: 50px;
   @include fullWidth;
-  background-color: #F0F1F1;
+  background-color: $color-overlay;
 
   @include tablet {
     flex-direction: row;

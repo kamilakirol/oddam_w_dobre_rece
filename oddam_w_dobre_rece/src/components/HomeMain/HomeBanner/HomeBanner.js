@@ -11,10 +11,10 @@ const HomeBanner = () => {
                     <h1 className='banner_box_title'>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce</h1>
                     <img src={BannerDecoration} className='banner_box_decoration' alt='decoration line' />
                     <div className='banner_box_buttons'>
-                        <button className='banner_box_buttons_btn'>
+                        <button className=' btn banner_box_buttons_btn'>
                             <Link className='banner_box_buttons_btn_link' to='logowanie'>ODDAJ <br/> RZECZY</Link>
                         </button>
-                        <button className='banner_box_buttons_btn'>
+                        <button className='btn banner_box_buttons_btn'>
                             <Link className='banner_box_buttons_btn_link' to='logowanie'>ZORGANIZUJ <br/> ZBIÓRKĘ</Link>
                         </button>
                     </div>

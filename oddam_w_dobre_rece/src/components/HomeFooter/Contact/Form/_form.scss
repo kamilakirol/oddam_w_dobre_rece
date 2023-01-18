@@ -91,7 +91,7 @@ input, textarea{
     align-self: flex-end;
 
     &:hover {
-      background-color: #fefeb1;
+      background-color: $color-overlay;
     }
   }
 }
