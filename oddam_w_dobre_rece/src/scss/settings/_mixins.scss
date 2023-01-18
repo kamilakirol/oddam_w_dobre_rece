@@ -4,6 +4,13 @@
   }
 }
 
+@mixin mateebook {
+  @media (min-width: $width-xl) {
+    @content
+  }
+}
+
+
 @mixin tablet {
   @media (min-width: $width-m) {
     @content
@@ -25,6 +32,12 @@
     width: calc(100% + 60px);
     margin-left: -30px;
     margin-right: -30px;
+  }
+
+  @include notebook {
+    margin-left: 0;
+    margin-right:0;
+    width: 100%;
   }
 }
 

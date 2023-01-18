@@ -1,13 +1,15 @@
 import React from 'react';
-import HomeContact from "./HomeContact/HomeContact";
-import HomeFooterBox from "./HomeFooterCopyright/HomeFooterBox";
+import Contact from "./Contact/Contact";
+import FooterCopyright from "./FooterCopyright/FooterCopyright";
 
 const HomeFooter = () => {
     return (
-        <footer id='contact' className='footer'>
-            <div className='container'>
-                <HomeContact/>
-                <HomeFooterBox/>
+        <footer className='footer'>
+            <div className='footer_overlay'>
+                <div className='footer_overlay_container container'>
+                    <Contact/>
+                    <FooterCopyright/>
+                </div>
             </div>
         </footer>
     );
