@@ -8,8 +8,8 @@ const FooterCopyright = () => {
             <div></div>
             <p className='footercopy_text'>Copyright by Coders Lab</p>
             <div className='footercopy_icons'>
-                <img className='footercopy_icons_img' src={FacebookImg} alt='facebook icon'/>
-                <img className='footercopy_icons_img' src={InstagramImg} alt='instagram icon'/>
+                <a href="https://facebook.com" target="_blank" rel='noreferrer'> <img className='footercopy_icons_img' src={FacebookImg} alt='facebook icon'/></a>
+                <a href="https://instagram.com"> <img className='footercopy_icons_img' src={InstagramImg} alt='instagram icon'/></a>
             </div>
         </div>
     );

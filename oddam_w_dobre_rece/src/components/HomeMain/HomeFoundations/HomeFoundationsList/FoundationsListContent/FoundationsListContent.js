@@ -14,9 +14,9 @@ const FoundationsListContent = ({itemActive, offset, setOffset}) => {
 
     return (
             <ul className='foundationsListContent'>
-                {placeList.map(place => {
+                {placeList.map((place, index) => {
                         return (
-                            <li className='foundationsListContent_item'>
+                            <li key={index} className='foundationsListContent_item'>
                                 <div className='foundationsListContent_item_box'>
 
                                     <div className='foundationsListContent_item_box_info'>

@@ -2,6 +2,7 @@ label {
   font-weight: 600;
   margin-bottom: 15px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 input, textarea{
@@ -95,3 +96,17 @@ input, textarea{
     }
   }
 }
+
+.errors {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sent {
+  color: #36A12C;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
