@@ -3,6 +3,7 @@
   border: 1px solid $color-main;
   position: relative;
   overflow: hidden;
+  color: $color-text;
 
   &::after {
     position: absolute;

@@ -6,7 +6,7 @@ const HomeFoundations = () => {
     return (
         <section id='foundations' className='foundations'>
             <div className='container'>
-                <h2 className='foundations_title'>Komu pomagamy?</h2>
+                <h2 className='title foundations_title'>Komu pomagamy?</h2>
                 <img src={DecorationImg} alt='decoration line'/>
                 <HomeFoundationsList/>
             </div>

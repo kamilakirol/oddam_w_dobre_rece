@@ -11,8 +11,8 @@ const HomeSteps = () => {
     return (
         <section id='steps' className='steps'>
             <div className='container steps_container'>
-                <h2 className='steps_title'>Wystarczą 4 proste kroki</h2>
-                <img src={DecorationImg} className='steps_decoration' alt='decoration line'/>
+                <h2 className='title'>Wystarczą 4 proste kroki</h2>
+                <img src={DecorationImg} className='decoration' alt='decoration line'/>
 
                     <div className='steps_box'>
                         <HomeStepsItem image={ShirtIcon} title='Wybierz rzeczy' text=' ubrania , zabawki, sprzęt i inne'/>

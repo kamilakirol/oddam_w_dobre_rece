@@ -6,8 +6,8 @@ const Contact = () => {
     return (
         <section id='contact' className='contact'>
             <div className='contact_box'>
-                <h2 className='contact_box_title'>Skontaktuj się z nami</h2>
-                <img className='contact_box_decoration' src={DecorationImg} alt='Decoration line' />
+                <h2 className='title '>Skontaktuj się z nami</h2>
+                <img className='decoration' src={DecorationImg} alt='Decoration line' />
             </div>
             <Form/>
         </section>

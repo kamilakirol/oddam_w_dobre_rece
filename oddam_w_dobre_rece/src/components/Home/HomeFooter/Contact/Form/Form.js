@@ -103,7 +103,6 @@ const Form = () => {
                     <div className='form_info_item'>
                         <label htmlFor='email'>Wpisz swój email</label>
                         <input
-                            className={formErrors.length > 0 ? 'activeError': ''}
                             id='email'
                             name='email'
                             value={formValues.email}

@@ -12,10 +12,10 @@ const HomeBanner = () => {
                     <img src={BannerDecoration} className='banner_box_decoration' alt='decoration line' />
                     <div className='banner_box_buttons'>
                         <button className=' btn banner_box_buttons_btn'>
-                            <Link className='banner_box_buttons_btn_link' to='logowanie'>ODDAJ <br/> RZECZY</Link>
+                            <Link className='link banner_box_buttons_btn_link' to='logowanie'>ODDAJ <br/> RZECZY</Link>
                         </button>
                         <button className='btn banner_box_buttons_btn'>
-                            <Link className='banner_box_buttons_btn_link' to='logowanie'>ZORGANIZUJ <br/> ZBIÓRKĘ</Link>
+                            <Link className='link banner_box_buttons_btn_link' to='logowanie'>ZORGANIZUJ <br/> ZBIÓRKĘ</Link>
                         </button>
                     </div>
                 </div>

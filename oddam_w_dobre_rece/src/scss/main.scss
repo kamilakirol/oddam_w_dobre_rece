@@ -6,5 +6,9 @@
 @import "settings/mixins";
 @import "settings/base";
 @import "settings/btn";
+@import "settings/title";
+@import "settings/form";
+@import "settings/link";
 
 @import "../components/Home/home";
+@import "../components/LoginPage/loginPage";
