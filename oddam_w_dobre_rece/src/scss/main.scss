@@ -10,7 +10,10 @@
 @import "settings/form";
 @import "settings/link";
 @import "settings/logPageBase";
+@import "settings/overlay";
 
-@import "../components/Dashboard/Navigation/navigation";
-@import "../components/Home/home";
-@import "../components/LogOutPage/logOutPage";
+
+@import "../components/Navigation/navigation";
+@import "../components/Dashboard/Home/home";
+@import "../components/Dashboard/LogOutPage/logOutPage";
+@import "../components/GivePage/givePage";

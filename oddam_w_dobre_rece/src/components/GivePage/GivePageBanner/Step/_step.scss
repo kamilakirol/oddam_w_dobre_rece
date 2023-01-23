@@ -1,0 +1,39 @@
+.step {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    width: 160px;
+    height: 160px;
+  }
+
+
+  &:before {
+    content: '';
+    border: 1px solid $color-main;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+  &_number {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+
+  &_text {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    width: 100px;
+    line-height: 1.5;
+  }
+
+}

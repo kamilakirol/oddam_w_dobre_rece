@@ -2,11 +2,12 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import Home from "./components/Home/Home";
-import LoginPage from "./components/LoginPage/LoginPage";
+import Home from "./components/Dashboard/Home/Home";
+import LoginPage from "./components/Dashboard/LoginPage/LoginPage";
 import Dashboard from "./components/Dashboard/Dashboard";
-import RegistrationPage from "./components/RegistrationPage/RegistrationPage";
-import LogOutPage from "./components/LogOutPage/LogOutPage";
+import RegistrationPage from "./components/Dashboard/RegistrationPage/RegistrationPage";
+import LogOutPage from "./components/Dashboard/LogOutPage/LogOutPage";
+import GivePage from "./components/GivePage/GivePage";
 
 function App() {
 
@@ -32,6 +33,10 @@ function App() {
                     element: <LogOutPage/>
                 }
             ]
+        },
+        {
+            path:'oddaj-rzeczy',
+            element: <GivePage/>
         }
     ])
 
