@@ -65,12 +65,12 @@ const Form = () => {
         }
 
         if(!values.email ) {
-            errors.email = 'Podane email jest nieprawidłowe'
+            errors.email = 'Podane email jest nieprawidłowy!'
         } else if (!regexEmail.test(values.email)) {
             errors.email = "Email nie ma prawidłowego formatu";
         }
 
-        if(!values.message || values.message.length <= 120) {
+        if(!values.message && values.message.length <= 120) {
             errors.message = 'Wiadomość musi mieć conajmniej 120 znaków'
         }
 

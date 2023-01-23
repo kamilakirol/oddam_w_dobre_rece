@@ -12,7 +12,7 @@
   &_box {
     display: flex;
     justify-content: space-between;
-    margin: 37px 0;
+    margin: 25px 0;
 
     @include tablet {
       flex-direction: column;
