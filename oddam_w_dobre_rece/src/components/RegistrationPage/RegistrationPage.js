@@ -5,10 +5,13 @@ import RegistrationPageForm from "./RegistrationPageForm/RegistrationPageForm";
 const RegistrationPage = () => {
     return (
         <section className='logPage'>
-            <h1 className='title'>Załóż konto</h1>
-            <img className='decoration' src={DecorationImg} alt='decoration line'/>
 
-            <RegistrationPageForm/>
+            <div className='container'>
+                <h1 className='title'>Załóż konto</h1>
+                <img className='decoration' src={DecorationImg} alt='decoration line'/>
+                <RegistrationPageForm/>
+            </div>
+
         </section>
     );
 };

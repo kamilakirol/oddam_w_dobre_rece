@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import LoginPage from "./components/LoginPage/LoginPage";
 import Dashboard from "./components/Dashboard/Dashboard";
 import RegistrationPage from "./components/RegistrationPage/RegistrationPage";
+import LogOutPage from "./components/LogOutPage/LogOutPage";
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
                 {
                     path: "rejestracja",
                     element: <RegistrationPage/>
+                },
+                {
+                    path:"wylogowano",
+                    element: <LogOutPage/>
                 }
             ]
         }

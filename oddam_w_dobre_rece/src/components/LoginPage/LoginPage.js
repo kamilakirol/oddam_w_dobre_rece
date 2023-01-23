@@ -5,9 +5,11 @@ import LoginPageForm from "./LoginPageForm/LoginPageForm";
 const LoginPage = () => {
     return (
         <section className='logPage'>
-            <h1 className='title'>Zaloguj się</h1>
-            <img className='decoration' src={DecorationImg} alt='decoration line'/>
-            <LoginPageForm/>
+            <div className='container'>
+                <h1 className='title'>Zaloguj się</h1>
+                <img className='decoration' src={DecorationImg} alt='decoration line'/>
+                <LoginPageForm/>
+            </div>
         </section>
     );
 };
