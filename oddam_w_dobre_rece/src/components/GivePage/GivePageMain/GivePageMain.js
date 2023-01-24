@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import GivePageHeader from "./GivePageHeader/GivePageHeader";
-import GivePageForm from "./GivePageForm/GivePageForm";
+import GivePageSteps from "./GivePageSteps/GivePageSteps";
 
 const GivePageMain = () => {
+    const [step, setStep] = useState(1);
 
     return (
         <>
-            <GivePageHeader/>
-            <GivePageForm/>
+            <GivePageHeader step={step}/>
+            <GivePageSteps step={step} setStep={setStep}/>
         </>
     );
 };

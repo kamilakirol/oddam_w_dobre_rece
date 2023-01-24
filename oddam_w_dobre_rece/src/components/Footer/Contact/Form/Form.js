@@ -15,7 +15,6 @@ const Form = () => {
         setFormValues({...formValues, [name]: value});
     }
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const errors = validate(formValues);

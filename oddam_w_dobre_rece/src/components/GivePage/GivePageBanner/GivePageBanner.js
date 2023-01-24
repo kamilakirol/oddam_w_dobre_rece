@@ -1,6 +1,6 @@
 import React from 'react'
 import DecorationImg from "../../../assets/Decoration.svg"
-import Step from "./Step/Step";
+import StepsItem from "./StepsItem/StepsItem";
 
 const GivePageBanner = () => {
     const steps = [
@@ -20,7 +20,7 @@ const GivePageBanner = () => {
                         <h2 className='givePageBanner_box_text'>Wystarczą 4 proste kroki:</h2>
                         <div className='givePageBanner_box_steps'>
                             {steps.map(step => {
-                                return <Step key={step.num} num={step.num} text={step.text}/>
+                                return <StepsItem key={step.num} num={step.num} text={step.text}/>
                             })}
 
                         </div>

@@ -1,0 +1,36 @@
+.givePageStepItem {
+  padding-top: 30px;
+  padding-bottom: 70px;
+
+  &_steps {
+   margin-bottom: 30px ;
+  }
+
+  &_title {
+    font-weight: 600;
+    font-size: 26px;
+    color: black;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &_form {
+    &_item {
+      display: flex;
+      align-items: center;
+
+      input[type=radio] {
+        border: 1px solid $color-main;
+        padding: 10px;
+        appearance: none;
+        margin-right: 15px;
+      }
+
+      label {
+        font-weight: 300;
+        color: black;
+
+      }
+    }
+  }
+}
