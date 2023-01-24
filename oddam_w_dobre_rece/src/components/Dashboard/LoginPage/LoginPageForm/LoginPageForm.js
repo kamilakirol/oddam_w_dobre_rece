@@ -71,7 +71,7 @@ const LoginPageForm = () => {
                 </div>
             </div>
 
-            <LoginPageFormButtons/>
+            <LoginPageFormButtons to='/rejestracja' textLink='Załóż konto' textSubmit='Zaloguj się' />
 
         </form>
     );

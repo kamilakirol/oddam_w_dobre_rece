@@ -136,7 +136,10 @@
 
             &_link {
               display: flex;
-              padding: 9px 20px;
+
+              .link {
+                padding: 9px 20px;
+              }
             }
           }
         }

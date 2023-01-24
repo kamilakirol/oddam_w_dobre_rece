@@ -1,0 +1,28 @@
+.givePageHeader {
+  background-color: $color-yellow-light;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &_title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &_text {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  @include mateebook {
+    &_title {
+      font-size:36px ;
+    }
+
+    &_text {
+      font-size: 22px;
+    }
+  }
+}

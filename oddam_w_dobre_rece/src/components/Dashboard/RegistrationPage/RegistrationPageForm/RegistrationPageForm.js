@@ -94,7 +94,7 @@ const RegistrationPageForm = () => {
                 </div>
             </div>
 
-            <LoginPageFormButtons/>
+            <LoginPageFormButtons to='/logowanie' textLink='Zaloguj się' textSubmit='Załóż konto'/>
 
         </form>
     );
