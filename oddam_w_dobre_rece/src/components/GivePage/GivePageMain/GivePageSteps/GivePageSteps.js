@@ -7,16 +7,16 @@ const GivePageSteps = ({step, setStep}) => {
         bags: ''
     }
     const [formValues, setFormValues] = useState(initialState);
-    const [isSubmit, setIsSubmit] = useState(false);
+    // const [isSubmit, setIsSubmit] = useState(false);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormValues({...formValues, [name]: value})
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    // }
 
     const nextStep = () => {
         setStep(prevStep => {
