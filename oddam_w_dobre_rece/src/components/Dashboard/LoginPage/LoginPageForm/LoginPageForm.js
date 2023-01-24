@@ -9,7 +9,7 @@ const LoginPageForm = () => {
 
     const [loginValues, setLoginValues] = useState(initialState);
     const [loginErrors, setLoginErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
+    // const [isSubmit, setIsSubmit] = useState(false);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -25,7 +25,7 @@ const LoginPageForm = () => {
         if(!isValid){
             return;
         }
-        setIsSubmit(true);
+        // setIsSubmit(true);
 
     }
 

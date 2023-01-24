@@ -10,7 +10,7 @@ const RegistrationPageForm = () => {
 
     const [registrationValues, setRegistrationValues] = useState(initialState);
     const [registrationErrors, setRegistrationErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
+    // const [isSubmit, setIsSubmit] = useState(false);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -24,9 +24,9 @@ const RegistrationPageForm = () => {
         setRegistrationErrors(errors);
 
         if(!isValid){
-            return;
+            return
         }
-        setIsSubmit(true);
+        // setIsSubmit(true);
 
     }
 
