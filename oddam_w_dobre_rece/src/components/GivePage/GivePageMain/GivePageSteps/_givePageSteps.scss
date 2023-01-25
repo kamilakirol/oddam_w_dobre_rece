@@ -1,5 +1,6 @@
-@import "Step1/step1";
+@import "Step1/FormItemStep1/step1";
 @import "Step2/step2";
+@import "Step3/step3";
 
 .givePageSteps {
   background-image: url("../../../../assets/Background-Form.jpg");
@@ -11,7 +12,7 @@
     color: black;
     padding: 13px 30px;
     font-weight: 300;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom:50px;
 
     &:first-of-type {

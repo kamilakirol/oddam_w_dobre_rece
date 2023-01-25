@@ -1,19 +1,12 @@
-.givePageStepItem_form_item_select {
-  margin-left: 25px;
+.givePageStepItem_item_select {
+  margin-left: 20px;
   background-color: transparent;
-  width: 120px;
-
-  select {
-    background-color: #EDEDEB;
-    font-family: $font-base;
-  }
+  width: 220px;
+  margin-top: 15px;
+  font-family: $font-base;
 
   option {
     background-color: #EDEDEB;
     font-family: $font-base;
-
-    &:hover {
-      border: 1px solid $color-main;
-    }
   }
 }

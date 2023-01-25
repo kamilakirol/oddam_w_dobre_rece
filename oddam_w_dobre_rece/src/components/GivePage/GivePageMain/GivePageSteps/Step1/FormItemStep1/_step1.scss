@@ -1,0 +1,12 @@
+.step1 {
+  input[type=radio] {
+    border: 1px solid $color-main;
+    padding: 10px;
+    appearance: none;
+    margin-right: 15px;
+
+    &:checked {
+      background-color: $color-yellow-light;
+    }
+  }
+}

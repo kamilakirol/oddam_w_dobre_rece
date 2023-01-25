@@ -23,7 +23,7 @@ const LoginPageForm = () => {
         setLoginErrors(errors);
 
         if(!isValid){
-            return;
+            return
         }
         // setIsSubmit(true);
 

@@ -1,0 +1,29 @@
+.givePageStepItem {
+  padding-top: 30px;
+  height: 700px;
+
+  &_steps {
+    margin-bottom: 30px;
+  }
+
+  &_title {
+    font-weight: 600;
+    font-size: 26px;
+    color: black;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+
+  &_item {
+    display: flex;
+    align-items: center;
+
+    label {
+      font-weight: 300;
+      color: black;
+
+    }
+  }
+
+}
