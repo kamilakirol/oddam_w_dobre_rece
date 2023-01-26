@@ -16,10 +16,12 @@ const GivePageHeader = ({step}) => {
     return (
         <section className='givePageHeader'>
             <div className='container'>
-                <h3 className='givePageHeader_title'>Ważne!</h3>
-                <p className='givePageHeader_text'>
-                    <WhichStep/>
-                </p>
+                <div className='givePageHeader_box'>
+                    <h3 className='givePageHeader_box_title'>Ważne!</h3>
+                    <p className='givePageHeader_box_text'>
+                        <WhichStep/>
+                    </p>
+                </div>
             </div>
         </section>
     );

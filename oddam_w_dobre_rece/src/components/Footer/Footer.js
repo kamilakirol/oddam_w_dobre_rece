@@ -6,9 +6,12 @@ const Footer = () => {
     return (
         <footer className='footer'>
             <div className='overlay'>
-                <div className='footer_container container'>
-                    <Contact/>
-                    <FooterCopyright/>
+                <div className='container'>
+                    <div className='footer_box'>
+                        <Contact/>
+                        <FooterCopyright/>
+                    </div>
+
                 </div>
             </div>
         </footer>

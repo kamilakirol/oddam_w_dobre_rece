@@ -8,7 +8,7 @@ const Step3 = ({handleChange, formValues,  handleChangeCheckbox, formErrors}) =>
     return (
         <div className='givePageStepItem'>
             <p className='givePageStepItem_steps'>Krok 3/4</p>
-            <h2 className='givePageStepItem_title'>Lokalizacja:</h2>
+            <h2 className='givePageStepItem_title titleStep3'>Lokalizacja:</h2>
             <form>
                 <LocalizationForm
                     handleChange={handleChange}

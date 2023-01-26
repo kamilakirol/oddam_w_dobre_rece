@@ -63,7 +63,6 @@ const GivePageSteps = ({step, setStep}) => {
     }
 
     const validationsStep3 = () => {
-        console.log({formValues})
         if (!formValues.helpGroups.length) {
             setFormErrors({helpGroups: 'Musisz wybrać przynajmniej jedną grupe której chcesz pomóc'})
             return false;
@@ -105,15 +104,18 @@ const GivePageSteps = ({step, setStep}) => {
     return (
         <section className='givePageSteps'>
             <div className='container'>
-                <WhichStep
-                    step={step}
-                    formValues={formValues}
-                    handleChange={handleChange}
-                    handleChangeCheckbox={handleChangeCheckbox}
-                    formErrors={formErrors}
-                />
-                {step === 1 ? '' : <button className='btn givePageSteps_btn' onClick={previousStep}>Wstecz</button> }
-                <button className='btn givePageSteps_btn' onClick={onNextClick}>Dalej</button>
+                <div className='givePageSteps_box'>
+                    <WhichStep
+                        step={step}
+                        formValues={formValues}
+                        handleChange={handleChange}
+                        handleChangeCheckbox={handleChangeCheckbox}
+                        formErrors={formErrors}
+                    />
+                    {step === 1 ? '' : <button className='btn givePageSteps_box_btn' onClick={previousStep}>Wstecz</button> }
+                    <button className='btn givePageSteps_box_btn' onClick={onNextClick}>Dalej</button>
+                </div>
+
             </div>
         </section>
     );

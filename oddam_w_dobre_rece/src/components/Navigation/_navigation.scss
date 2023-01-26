@@ -19,6 +19,10 @@
       align-items: flex-end;
     }
 
+    @include mateebook {
+      padding-right: 100px;
+    }
+
     &_login_menu {
       display: flex;
       font-size: 13px;
