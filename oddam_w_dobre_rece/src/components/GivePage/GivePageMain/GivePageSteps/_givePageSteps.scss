@@ -1,14 +1,21 @@
-@import "Step1/FormItemStep1/step1";
-@import "Step2/step2";
-@import "Step3/step3";
-@import "Step4/step4";
+@import "WhichStep/Step1/FormItemStep1/step1";
+@import "WhichStep/Step2/step2";
+@import "WhichStep/Step3/step3";
+@import "WhichStep/Step4/step4";
+@import "WhichStep/Step5/step5";
+@import "WhichStep/Step6/step6";
 
 .givePageSteps_box {
   @include fullWidth;
-  background-image: url("../../../../assets/Background-Form.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 0 20px;
+
+
+  @include mateebook {
+    background-image: url("../../../../assets/TeddyBearImg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+  }
 
   &_btn {
     background-color: transparent;

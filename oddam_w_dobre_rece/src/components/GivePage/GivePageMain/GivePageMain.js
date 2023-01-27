@@ -7,7 +7,7 @@ const GivePageMain = () => {
 
     return (
         <>
-            <GivePageHeader step={step}/>
+            {step <= 4 ? <GivePageHeader step={step}/> : ''}
             <GivePageSteps step={step} setStep={setStep}/>
         </>
     );

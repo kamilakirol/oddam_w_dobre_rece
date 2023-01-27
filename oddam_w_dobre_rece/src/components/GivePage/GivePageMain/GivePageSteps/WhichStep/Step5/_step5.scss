@@ -1,0 +1,40 @@
+.step5{
+  padding-top: 50px;
+
+  &_title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  &_item {
+    margin-bottom: 30px;
+
+    &_title {
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: black;
+    }
+
+    &_box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+
+      img {
+        height: 50px;
+        margin-right: 10px;
+      }
+
+      &_title {
+        margin-right: 20px;
+        width: 110px;
+        color: black;
+      }
+
+      &_text {
+        color: black;
+      }
+    }
+  }
+}
+

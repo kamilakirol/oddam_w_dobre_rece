@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import WhichStep from "./WhichStep/WhichStep";
+import PreviousButton from "./PreviousButton/PreviousButton";
 
 const GivePageSteps = ({step, setStep}) => {
     const initialState = {
@@ -12,8 +13,8 @@ const GivePageSteps = ({step, setStep}) => {
         city:'',
         postCode:'',
         phone:'',
-        date:'',
-        time:'',
+        dateValue:'',
+        timeValue:'',
         comments:''
     }
 
@@ -43,9 +44,9 @@ const GivePageSteps = ({step, setStep}) => {
         setFormErrors({})
     }
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    // }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
 
     const validateStep1 = () => {
         if (!formValues.donatedThings) {
@@ -72,6 +73,31 @@ const GivePageSteps = ({step, setStep}) => {
         } return true
     }
 
+    const validationsStep4 = () => {
+        const regexPostCode = /^[0-9]{2}-[0-9]{3}/
+        const regexPhone = /^[0-9]{9}/
+
+        if (!formValues.street.length) {
+            setFormErrors({street: 'Pole ulica musi się składać z minimum 2 znaków'})
+            return false;
+        } else if (formValues.city.length < 2 ){
+            setFormErrors({city: 'Pole miasto musi się składać z minimum 2 znaków'})
+            return false;
+        } else if (!regexPostCode.test(formValues.postCode)) {
+            setFormErrors({postCode: 'Podany kod pocztowy jest nieprawidłowy' })
+            return false;
+        } else if (!regexPhone.test(formValues.phone)) {
+            setFormErrors({phone: 'Podany telefon musi miec format xxx-xxx-xxx'})
+            return false;
+        } else if (!formValues.dateValue) {
+            setFormErrors({dateValue: 'Musisz podać date'})
+            return false;
+        } else if (!formValues.timeValue) {
+            setFormErrors({timeValue: 'Musisz podać godzinę'})
+            return false;
+        }
+        return true
+    }
 
     const onNextClick = () => {
         // validation
@@ -82,6 +108,10 @@ const GivePageSteps = ({step, setStep}) => {
             isValid = validationStep2()
         } else if (step === 3) {
             isValid = validationsStep3()
+        } else if (step === 4) {
+            isValid = validationsStep4()
+        } else if (step === 5) {
+            nextStep()
         }
         if (isValid) {
             nextStep()
@@ -90,7 +120,7 @@ const GivePageSteps = ({step, setStep}) => {
 
     const nextStep = () => {
         setStep(prevStep => {
-            if(prevStep < 5 ) {
+            if(prevStep <= 5 ) {
                 return prevStep + 1
             }
             return prevStep
@@ -98,8 +128,14 @@ const GivePageSteps = ({step, setStep}) => {
     }
 
     const previousStep = () => {
-        setStep(prevStep => prevStep - 1)
+        setStep(prevStep => {
+            if (prevStep <= 5 || prevStep > 2) {
+                return prevStep - 1
+            }
+            return prevStep
+        })
     }
+
 
     return (
         <section className='givePageSteps'>
@@ -112,8 +148,12 @@ const GivePageSteps = ({step, setStep}) => {
                         handleChangeCheckbox={handleChangeCheckbox}
                         formErrors={formErrors}
                     />
-                    {step === 1 ? '' : <button className='btn givePageSteps_box_btn' onClick={previousStep}>Wstecz</button> }
-                    <button className='btn givePageSteps_box_btn' onClick={onNextClick}>Dalej</button>
+                    <PreviousButton
+                        previousStep={previousStep}
+                        step={step}
+                    />
+                    {step <= 4 && <button className='btn givePageSteps_box_btn' onClick={onNextClick}>Dalej</button>}
+                    {step === 5 && <button className='btn givePageSteps_box_btn' onSubmit={handleSubmit} onClick={onNextClick}>Potwierdzam</button>}
                 </div>
 
             </div>
