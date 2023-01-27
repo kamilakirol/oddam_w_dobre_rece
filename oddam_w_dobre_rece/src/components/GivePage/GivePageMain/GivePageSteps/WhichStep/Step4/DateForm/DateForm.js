@@ -17,13 +17,17 @@ const DateForm = ({handleChange, formValues, formErrors}) => {
 
             <div className='step4_box'>
                 <label htmlFor='timeValue'>Godzina</label>
-                <input
-                    type='time'
-                    id='timeValue'
+
+                <select
                     name='timeValue'
                     value={formValues.timeValue}
                     onChange={handleChange}
-                />
+                >
+                    <option value="" hidden>-- wybierz --</option>
+                    <option value='9:00-12:00'>9:00-12:00</option>
+                    <option value='12:00-16:00'>12:00-16:00</option>
+                    <option value='16:00-20:00'>16:00-20:00</option>
+                </select>
 
             </div>
 

@@ -5,6 +5,10 @@
   justify-content: center;
   width: 100%;
 
+  @include mateebook {
+    width:60%
+  }
+
 
   &_title {
     font-size: 30px;
