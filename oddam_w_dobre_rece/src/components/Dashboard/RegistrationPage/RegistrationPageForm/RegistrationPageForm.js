@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import LoginPageFormButtons from "../../LoginPage/LoginPageForm/LoginPageFormButtons/LoginPageFormButtons";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../../../../firebase"
 
 const RegistrationPageForm = () => {
     const initialState = {
@@ -26,6 +28,11 @@ const RegistrationPageForm = () => {
         if(!isValid){
             return
         }
+
+        createUserWithEmailAndPassword(auth, registrationValues.email, registrationValues.password)
+            .catch((error) => {
+                alert('Error: nie udało się zarejestrować, spróbój ponownie.')
+            });
         // setIsSubmit(true);
 
     }

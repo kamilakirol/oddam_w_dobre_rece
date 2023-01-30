@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Menu from "./components Navigation/Menu";
 import Burger from "./components Navigation/Burger";
-import Login from "./components Navigation/Login";
+import MenuLogin from "./components Navigation/MenuLogin";
 
 const Navigation = () => {
     const [isMenuActive, setIsMenuActive] = useState(false);
@@ -11,7 +11,7 @@ const Navigation = () => {
         <header className='header'>
             <div className='container'>
                 <div className='header_box'>
-                   <Login/>
+                   <MenuLogin/>
                     <nav className='header_box_nav'>
                         <Burger setIsMenuActive={setIsMenuActive} isMenuActive={isMenuActive}/>
                         <Menu setIsMenuActive={setIsMenuActive}/>

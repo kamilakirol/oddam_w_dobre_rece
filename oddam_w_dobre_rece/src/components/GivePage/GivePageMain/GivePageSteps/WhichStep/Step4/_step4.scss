@@ -47,11 +47,16 @@
       display: inline-block;
       width: 70px;
       margin-bottom: 10px;
+      cursor: pointer;
     }
 
     input, textarea {
       border: 1px solid $color-main;
       margin-bottom: 0;
+      cursor: pointer;
+    }
+    select {
+      cursor: pointer;
     }
   }
 }

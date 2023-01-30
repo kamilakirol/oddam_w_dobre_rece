@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-const LoginItem = ({to, text}) => {
+const MenuLoginItem = ({to, text}) => {
     return (
         <li>
             <Link className='header_box_login_menu_item' to={to}>{text}</Link>
@@ -9,4 +9,4 @@ const LoginItem = ({to, text}) => {
     );
 };
 
-export default LoginItem;
+export default MenuLoginItem;
