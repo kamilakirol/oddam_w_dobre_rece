@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import LoginPageFormButtons from "../../LoginPage/LoginPageForm/LoginPageFormButtons/LoginPageFormButtons";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../../../../firebase"
+import {UserContext} from "../../../../FirebaseAuth";
+
 
 const RegistrationPageForm = () => {
     const initialState = {
@@ -9,6 +11,8 @@ const RegistrationPageForm = () => {
         password: '',
         password2: '',
     };
+
+    const [user] = useContext(UserContext)
 
     const [registrationValues, setRegistrationValues] = useState(initialState);
     const [registrationErrors, setRegistrationErrors] = useState({});
@@ -31,7 +35,7 @@ const RegistrationPageForm = () => {
 
         createUserWithEmailAndPassword(auth, registrationValues.email, registrationValues.password)
             .catch((error) => {
-                alert('Error: nie udało się zarejestrować, spróbój ponownie.')
+                alert(`Error: Email jest już zarejstrowany, zaloguj się albo użyj innego maila do rejestracji ${error}.`)
             });
         // setIsSubmit(true);
 
@@ -100,6 +104,7 @@ const RegistrationPageForm = () => {
                     <p className='errors'>{registrationErrors.password2}</p>
                 </div>
             </div>
+
 
             <LoginPageFormButtons to='/logowanie' textLink='Zaloguj się' textSubmit='Załóż konto'/>
 

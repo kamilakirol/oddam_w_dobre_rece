@@ -4,7 +4,7 @@ import PeopleImg from "../../../../../assets/PeopleImg.jpg";
 
 const HomeAboutUs = () => {
     return (
-        <section className='aboutUs'>
+        <section id='aboutUs' className='aboutUs'>
             <div className=' container'>
                 <div className="aboutUs_container">
                     <HomeAboutUsBox/>

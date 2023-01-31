@@ -1,12 +1,18 @@
 import React from 'react';
-import {Link as LinkScroll} from "react-scroll";
+import {HashLink} from "react-router-hash-link";
 
 const MenuItem = ({to, text, offset, setIsMenuActive}) => {
+    const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = offset;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    }
+
     return (
         <li className='header_box_nav_menu_item' >
-            <LinkScroll className='header_box_nav_menu_item_link link' activeClass="active" to={to} duration={300} offset={offset} smooth onClick={()=> setIsMenuActive(false)}>
+            <HashLink className='header_box_nav_menu_item_link link' to={to} scroll={el => scrollWithOffset(el)} smooth onClick={()=> setIsMenuActive(false)}>
                     {text}
-            </LinkScroll>
+            </HashLink>
         </li>
     );
 };

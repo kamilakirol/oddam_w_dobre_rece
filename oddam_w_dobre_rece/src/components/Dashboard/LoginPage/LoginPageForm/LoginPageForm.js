@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import LoginPageFormButtons from "./LoginPageFormButtons/LoginPageFormButtons";
+import {signInWithEmailAndPassword} from 'firebase/auth';
+import {auth} from "../../../../firebase"
 
 const LoginPageForm = () => {
     const initialState = {
@@ -26,6 +28,11 @@ const LoginPageForm = () => {
             return
         }
         // setIsSubmit(true);
+        signInWithEmailAndPassword(auth, loginValues.email, loginValues.password)
+            .catch((error) => {
+                console.error(`Twój email lub hasło są niepoprawne, sprawdź swoje dane ${error}`)
+            })
+
 
     }
 

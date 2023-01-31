@@ -1,11 +1,11 @@
 import React from 'react';
 import MenuItem from "./MenuItem";
 
-const menu = [{to: 'banner', text: 'Start'},
-    {to: 'steps', text: 'O co chodzi?', offset: -90},
-    {to: 'aboutUs', text: 'O nas', offset: -90},
-    {to: 'foundations', text: 'Fundacje i organizacje', offset: -90},
-    {to: 'contact', text: 'Kontakt'}];
+const menu = [{to: '/#banner', text: 'Start'},
+    {to: '/#steps', text: 'O co chodzi?', offset: -90},
+    {to: '/#aboutUs', text: 'O nas', offset: -90},
+    {to: '/#foundations', text: 'Fundacje i organizacje', offset: -90},
+    {to: '/#contact', text: 'Kontakt'}];
 
 const Menu = ({setIsMenuActive}) => {
     return (
