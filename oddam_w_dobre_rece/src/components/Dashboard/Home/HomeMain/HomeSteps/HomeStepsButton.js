@@ -7,7 +7,7 @@ const HomeStepsButton = () => {
 
     return (
         <button className='btn steps_button_btn'>
-            <Link className='steps_button_btn_link' to={user ? '/oddaj-rzeczy': 'logowanie' }>ODDAJ <br/> RZECZY</Link>
+            <Link className='steps_button_btn_link' to={user.uid ? '/oddaj-rzeczy': 'logowanie' }>ODDAJ <br/> RZECZY</Link>
         </button>
     );
 };

@@ -9,7 +9,7 @@ const MenuLogin = () => {
     return (
         <nav className='header_box_login'>
             <ul className='header_box_login_menu'>
-                {user ?  <MenuLoginUser/> : <MenuLoginGuest/> }
+                {user.uid ?  <MenuLoginUser/> : <MenuLoginGuest/> }
             </ul>
         </nav>
     );

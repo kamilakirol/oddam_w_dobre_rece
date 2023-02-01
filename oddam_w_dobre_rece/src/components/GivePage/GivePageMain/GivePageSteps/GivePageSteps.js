@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import WhichStep from "./WhichStep/WhichStep";
 import PreviousButton from "./PreviousButton/PreviousButton";
+import {db} from "../../../../firebase";
+import {addDoc, collection} from 'firebase/firestore'
 
 const GivePageSteps = ({step, setStep}) => {
     const initialState = {
@@ -44,8 +46,26 @@ const GivePageSteps = ({step, setStep}) => {
         setFormErrors({})
     }
 
+    const formsRef = collection(db,'forms')
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        const doc = addDoc(formsRef, {
+            donatedThings: formValues.donatedThings,
+            bags: formValues.bags,
+            localization: formValues.localization,
+            helpGroups:formValues.helpGroups,
+            localizationSpecific:formValues.localizationSpecific,
+            street:formValues.street,
+            city:formValues.city,
+            postCode:formValues.postCode,
+            phone:formValues.phone,
+            dateValue:formValues.dateValue,
+            timeValue:formValues.timeValue,
+            comments:formValues.comments
+        })
+        onNextClick()
+        setFormValues(initialState)
     }
 
     const validateStep1 = () => {
@@ -141,20 +161,23 @@ const GivePageSteps = ({step, setStep}) => {
         <section className='givePageSteps'>
             <div className='container'>
                 <div className='givePageSteps_box'>
-                    <WhichStep
-                        step={step}
-                        formValues={formValues}
-                        handleChange={handleChange}
-                        handleChangeCheckbox={handleChangeCheckbox}
-                        formErrors={formErrors}
-                    />
-                    <PreviousButton
-                        previousStep={previousStep}
-                        step={step}
-                    />
-                    {step <= 4 && <button className='btn givePageSteps_box_btn' onClick={onNextClick}>Dalej</button>}
-                    {step === 5 && <button className='btn givePageSteps_box_btn' onSubmit={handleSubmit} onClick={onNextClick}>Potwierdzam</button>}
-                </div>
+                        <WhichStep
+                            step={step}
+                            formValues={formValues}
+                            handleChange={handleChange}
+                            handleChangeCheckbox={handleChangeCheckbox}
+                            formErrors={formErrors}
+                        />
+                        <PreviousButton
+                            previousStep={previousStep}
+                            step={step}
+                        />
+                        {step <= 4 && <button className='btn givePageSteps_box_btn' onClick={onNextClick}>Dalej</button>}
+                    <form onSubmit={handleSubmit}>
+                        {step === 5 && <button className='btn givePageSteps_box_btn' type='submit' onSubmit={handleSubmit}>Potwierdzam</button>}
+                    </form>
+
+                    </div>
 
             </div>
         </section>

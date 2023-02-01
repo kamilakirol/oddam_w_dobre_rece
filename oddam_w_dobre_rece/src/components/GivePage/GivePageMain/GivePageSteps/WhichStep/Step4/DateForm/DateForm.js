@@ -1,6 +1,10 @@
 import React from 'react';
 
 const DateForm = ({handleChange, formValues, formErrors}) => {
+
+    const date = new Date();
+    let currentDate = date.toJSON().slice(0,10)
+
     return (
         <div className='givePageStepItem_item step4'>
             <p className='step4_title'>Termin odbioru</p>
@@ -10,6 +14,7 @@ const DateForm = ({handleChange, formValues, formErrors}) => {
                 type='date'
                 id='dateValue'
                 name='dateValue'
+                min={currentDate}
                 value={formValues.dateValue}
                 onChange={handleChange}
                 />
