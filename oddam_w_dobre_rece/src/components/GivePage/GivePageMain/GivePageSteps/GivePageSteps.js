@@ -46,24 +46,28 @@ const GivePageSteps = ({step, setStep}) => {
         setFormErrors({})
     }
 
-    const formsRef = collection(db,'forms')
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const doc = addDoc(formsRef, {
-            donatedThings: formValues.donatedThings,
-            bags: formValues.bags,
-            localization: formValues.localization,
-            helpGroups:formValues.helpGroups,
-            localizationSpecific:formValues.localizationSpecific,
-            street:formValues.street,
-            city:formValues.city,
-            postCode:formValues.postCode,
-            phone:formValues.phone,
-            dateValue:formValues.dateValue,
-            timeValue:formValues.timeValue,
-            comments:formValues.comments
-        })
+        try {
+            const docRef = await addDoc(collection(db, "forms"), {
+                donatedThings: formValues.donatedThings,
+                bags: formValues.bags,
+                localization: formValues.localization,
+                helpGroups:formValues.helpGroups,
+                localizationSpecific:formValues.localizationSpecific,
+                street:formValues.street,
+                city:formValues.city,
+                postCode:formValues.postCode,
+                phone:formValues.phone,
+                dateValue:formValues.dateValue,
+                timeValue:formValues.timeValue,
+                comments:formValues.comments
+            });
+
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
         onNextClick()
         setFormValues(initialState)
     }
@@ -174,7 +178,7 @@ const GivePageSteps = ({step, setStep}) => {
                         />
                         {step <= 4 && <button className='btn givePageSteps_box_btn' onClick={onNextClick}>Dalej</button>}
                     <form onSubmit={handleSubmit}>
-                        {step === 5 && <button className='btn givePageSteps_box_btn' type='submit' onSubmit={handleSubmit}>Potwierdzam</button>}
+                        {step === 5 && <button className='btn givePageSteps_box_btn' type='submit' >Potwierdzam</button>}
                     </form>
 
                     </div>
