@@ -1,8 +1,8 @@
-import React, {useContext, useState} from 'react';
+import React, { useState} from 'react';
 import LoginPageFormButtons from "../../LoginPage/LoginPageForm/LoginPageFormButtons/LoginPageFormButtons";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../../../../firebase"
-import {UserContext} from "../../../../FirebaseAuth";
+import {useNavigate} from "react-router-dom";
 
 
 const RegistrationPageForm = () => {
@@ -12,8 +12,7 @@ const RegistrationPageForm = () => {
         password2: '',
     };
 
-    const [user] = useContext(UserContext)
-
+    const navigate = useNavigate();
     const [registrationValues, setRegistrationValues] = useState(initialState);
     const [registrationErrors, setRegistrationErrors] = useState({});
     // const [isSubmit, setIsSubmit] = useState(false);
@@ -34,6 +33,9 @@ const RegistrationPageForm = () => {
         }
 
         createUserWithEmailAndPassword(auth, registrationValues.email, registrationValues.password)
+            .then (() => {
+                navigate('/')
+            })
             .catch((error) => {
                 alert(`Error: Email jest już zarejstrowany, zaloguj się albo użyj innego maila do rejestracji ${error}.`)
             });

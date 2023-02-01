@@ -1,11 +1,11 @@
 const thingsDictionary = [
     {
         id:'goodClothes',
-        value: 'ubrania, które nadają się do ponownego użycia',
+        value: 'ubrania, stan bardzo dobry',
     },
     {
-        id: 'badClothes',
-        value: 'ubrania, do wyrzucenia',
+        id: 'electronics',
+        value: 'sprzęt elektroniczny',
     },
     {
         id: 'toys',

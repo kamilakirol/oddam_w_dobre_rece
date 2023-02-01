@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import WhichStep from "./WhichStep/WhichStep";
 import PreviousButton from "./PreviousButton/PreviousButton";
 import {db} from "../../../../firebase";
 import {addDoc, collection} from 'firebase/firestore'
+import {UserContext} from "../../../../FirebaseAuth";
 
 const GivePageSteps = ({step, setStep}) => {
     const initialState = {
@@ -20,6 +21,7 @@ const GivePageSteps = ({step, setStep}) => {
         comments:''
     }
 
+    const user = useContext(UserContext)
     const [formValues, setFormValues] = useState(initialState);
     const [formErrors, setFormErrors] = useState({});
     // const [isSubmit, setIsSubmit] = useState(false);
@@ -50,7 +52,7 @@ const GivePageSteps = ({step, setStep}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const docRef = await addDoc(collection(db, "forms"), {
+            await addDoc(collection(db, "forms"), {
                 donatedThings: formValues.donatedThings,
                 bags: formValues.bags,
                 localization: formValues.localization,
@@ -62,9 +64,9 @@ const GivePageSteps = ({step, setStep}) => {
                 phone:formValues.phone,
                 dateValue:formValues.dateValue,
                 timeValue:formValues.timeValue,
-                comments:formValues.comments
+                comments:formValues.comments,
+                userId: user.uid
             });
-
         } catch (e) {
             console.error("Error adding document: ", e);
         }
@@ -176,10 +178,9 @@ const GivePageSteps = ({step, setStep}) => {
                             previousStep={previousStep}
                             step={step}
                         />
+
                         {step <= 4 && <button className='btn givePageSteps_box_btn' onClick={onNextClick}>Dalej</button>}
-                    <form onSubmit={handleSubmit}>
-                        {step === 5 && <button className='btn givePageSteps_box_btn' type='submit' >Potwierdzam</button>}
-                    </form>
+                        {step === 5 && <button className='btn givePageSteps_box_btn' onClick={handleSubmit} >Potwierdzam</button>}
 
                     </div>
 

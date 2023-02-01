@@ -4,7 +4,7 @@ import MenuLoginItem from "./MenuLoginItem";
 import {auth} from '../../../firebase'
 
 const MenuLoginUser = () => {
-    const [user] = useContext(UserContext)
+    const user = useContext(UserContext)
     const handleSignOut = () => auth.signOut();
 
     return (

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import LoginPageFormButtons from "./LoginPageFormButtons/LoginPageFormButtons";
 import {signInWithEmailAndPassword} from 'firebase/auth';
 import {auth} from "../../../../firebase"
+import {useNavigate} from "react-router-dom";
 
 const LoginPageForm = () => {
     const initialState = {
@@ -9,6 +10,7 @@ const LoginPageForm = () => {
         password: ''
     };
 
+    const navigate = useNavigate();
     const [loginValues, setLoginValues] = useState(initialState);
     const [loginErrors, setLoginErrors] = useState({});
     // const [isSubmit, setIsSubmit] = useState(false);
@@ -29,11 +31,12 @@ const LoginPageForm = () => {
         }
         // setIsSubmit(true);
         signInWithEmailAndPassword(auth, loginValues.email, loginValues.password)
+            .then(() => {
+                navigate('/')
+            })
             .catch((error) => {
                 console.error(`Twój email lub hasło są niepoprawne, sprawdź swoje dane ${error}`)
             })
-
-
     }
 
     const validate = (values) => {
