@@ -4,7 +4,7 @@ const InfoPickUpDate = ({formValues}) => {
     const pickUpDateList = [
         {
             title: 'Data',
-            value:formValues.dateValue
+            value: new Date(formValues.dateValue).toLocaleDateString()
         },
         {
             title: 'Godzina',

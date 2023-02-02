@@ -16,6 +16,7 @@ const AddressForm = ({handleChange, formValues, formErrors}) => {
                                 name={item.name}
                                 value={formValues.name}
                                 onChange={handleChange}
+                                placeholder={item.placeholder}
                             />
                         </div>
                 )

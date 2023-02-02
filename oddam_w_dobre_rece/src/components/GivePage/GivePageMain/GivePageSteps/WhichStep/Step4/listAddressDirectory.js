@@ -9,11 +9,13 @@ const listAddressDirectory = [
     },
     {
         name:'postCode',
-        label:'Kod pocztowy'
+        label:'Kod pocztowy',
+        placeholder:'xx-xxx'
     },
     {
         name:'phone',
-        label:'Numer telefonu'
+        label:'Numer telefonu',
+        placeholder:'xxxxxxxxx'
     }
 ];
 

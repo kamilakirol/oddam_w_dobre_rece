@@ -1,22 +1,28 @@
 import React from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+
 
 const DateForm = ({handleChange, formValues, formErrors}) => {
 
-    const date = new Date();
-    let currentDate = date.toJSON().slice(0,10)
+    const handleDateChange = (date) => {
+        handleChange({target: {
+                name:'dateValue',
+                value: date.valueOf()
+            }
+        })
+    }
 
     return (
         <div className='givePageStepItem_item step4'>
             <p className='step4_title'>Termin odbioru</p>
             <div className='step4_box'>
                 <label htmlFor='dateValue'>Data</label>
-                <input
-                type='date'
-                id='dateValue'
-                name='dateValue'
-                min={currentDate}
-                value={formValues.dateValue}
-                onChange={handleChange}
+                <DatePicker
+                    id='dateValue'
+                    name='dateValue'
+                    selected={formValues.dateValue}
+                    onChange={handleDateChange}
                 />
             </div>
 
