@@ -7,7 +7,7 @@ const NumberBagsForm = ({formValues, handleChange}) => {
             <label>
                 Liczba 60l worków:
                 <select
-                    className='givePageStepItem_item_select'
+                    className='step2_select'
                     name="bags"
                     value={formValues.bags}
                     onChange={handleChange}

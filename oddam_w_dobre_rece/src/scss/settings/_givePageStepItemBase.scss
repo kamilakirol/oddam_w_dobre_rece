@@ -22,7 +22,10 @@
     label {
       font-weight: 300;
       color: black;
+    }
 
+    select {
+      background-color: $color_overlay;
     }
   }
 

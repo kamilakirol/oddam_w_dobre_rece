@@ -1,4 +1,3 @@
-
 .step4Form {
   display: flex;
   flex-direction: column;
@@ -56,6 +55,11 @@
       margin-bottom: 0;
       cursor: pointer;
     }
+
+    input::placeholder {
+      color: $color-text;
+    }
+
     form{
     display: inline;
     }
