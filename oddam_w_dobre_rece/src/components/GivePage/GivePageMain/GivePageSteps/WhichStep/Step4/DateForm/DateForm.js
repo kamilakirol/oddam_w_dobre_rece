@@ -1,6 +1,7 @@
 import React from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import subDays from "date-fns/subDays";
 
 
 const DateForm = ({handleChange, formValues, formErrors}) => {
@@ -23,6 +24,8 @@ const DateForm = ({handleChange, formValues, formErrors}) => {
                     name='dateValue'
                     selected={formValues.dateValue}
                     onChange={handleDateChange}
+                    minDate={subDays(new Date(), -1)}
+                    filterDate={date => date.getDay() !== 6 && date.getDay() !== 0}
                 />
             </div>
 
