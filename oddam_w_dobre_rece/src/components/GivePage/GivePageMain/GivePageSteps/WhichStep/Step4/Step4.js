@@ -2,7 +2,7 @@ import React from 'react';
 import AddressForm from "./AddressForm/AddressForm";
 import DateForm from "./DateForm/DateForm";
 
-const Step4 = ({handleChange, formValues, setFormValues, formErrors}) => {
+const Step4 = ({handleChange, formValues, formErrors}) => {
     return (
         <div className='givePageStepItem'>
             <p className='givePageStepItem_steps'>Krok 4/4</p>
@@ -17,7 +17,6 @@ const Step4 = ({handleChange, formValues, setFormValues, formErrors}) => {
                 <DateForm
                 handleChange={handleChange}
                 formValues={formValues}
-                setFormValues={setFormValues}
                 formErrors={formErrors}
                 />
             </form>
