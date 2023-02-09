@@ -1,6 +1,11 @@
 import React from 'react';
+import {StepFormValue} from "../../../../../../../types";
 
-const FormItemStep1 = ({item, handleChange, formValues}) => {
+type FormItemStep1Props = StepFormValue & {
+    item:  {id: string, value: string},
+}
+
+const FormItemStep1 = ({item, handleChange, formValues}: FormItemStep1Props) => {
     return (
         <div className='givePageStepItem_item step1'>
             <input

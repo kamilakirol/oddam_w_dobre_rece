@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import subDays from "date-fns/subDays";
+import {StepBasicValue} from "../../../../../../../types";
 
+const DateForm = ({handleChange, formValues, formErrors}: StepBasicValue) => {
 
-const DateForm = ({handleChange, formValues, formErrors}) => {
-
-    const handleDateChange = (date) => {
+    const handleDateChange = (date: Date) => {
         handleChange({target: {
                 name:'dateValue',
-                value: date.valueOf()
+                value: String(date.valueOf())
             }
-        })
+        } as ChangeEvent<HTMLInputElement>)
     }
 
     return (
@@ -22,10 +22,11 @@ const DateForm = ({handleChange, formValues, formErrors}) => {
                 <DatePicker
                     id='dateValue'
                     name='dateValue'
-                    selected={formValues.dateValue}
+                    //@ts-ignore
+                    selected={Number(formValues.dateValue) as Date}
                     onChange={handleDateChange}
                     minDate={subDays(new Date(), -1)}
-                    filterDate={date => date.getDay() !== 6 && date.getDay() !== 0}
+                    filterDate={(date: Date) => date.getDay() !== 6 && date.getDay() !== 0}
                 />
             </div>
 

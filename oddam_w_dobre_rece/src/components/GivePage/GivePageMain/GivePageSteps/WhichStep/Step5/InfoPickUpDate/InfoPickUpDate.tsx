@@ -1,10 +1,11 @@
 import React from 'react';
+import {FormValues} from "../../../../../../../types";
 
-const InfoPickUpDate = ({formValues}) => {
+const InfoPickUpDate = ({formValues}: FormValues) => {
     const pickUpDateList = [
         {
             title: 'Data',
-            value: new Date(formValues.dateValue).toLocaleDateString()
+            value: new Date(Number(formValues.dateValue)).toLocaleDateString()
         },
         {
             title: 'Godzina',

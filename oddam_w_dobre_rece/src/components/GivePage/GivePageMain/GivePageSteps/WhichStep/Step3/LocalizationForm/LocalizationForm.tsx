@@ -1,7 +1,8 @@
 import React from 'react';
 import {listLocalization} from "../directoryStep3";
+import {StepFormValue} from "../../../../../../../types";
 
-const LocalizationForm = ({handleChange, formValues}) => {
+const LocalizationForm = ({handleChange, formValues}: StepFormValue) => {
     return (
         <div className='givePageStepItem_item item_step3'>
             <select

@@ -1,6 +1,7 @@
 import React from 'react';
+import {FormValues} from "../../../../../../../types";
 
-const InfoPickUpAddress = ({formValues}) => {
+const InfoPickUpAddress = ({formValues}: FormValues) => {
     const pickUpAddressList = [
         {
             title: 'Ulica',

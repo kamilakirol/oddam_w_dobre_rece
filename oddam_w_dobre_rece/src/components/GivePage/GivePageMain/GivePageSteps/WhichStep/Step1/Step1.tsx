@@ -1,8 +1,9 @@
 import React from 'react';
 import thingsDictionary from "./thingsDictionary";
 import FormItemStep1 from "./FormItemStep1/FormItemStep1";
+import {StepBasicValue} from "../../../../../../types";
 
-const Step1 = ({handleChange, formValues, formErrors}) => {
+const Step1 = ({handleChange, formValues, formErrors}: StepBasicValue) => {
     return (
         <div className='givePageStepItem'>
             <p className='givePageStepItem_steps'>Krok 1/4</p>

@@ -1,8 +1,9 @@
 import React from 'react';
 import ShirtImg from "../../../../../../../assets/ShirtIcon.svg";
 import RecyclingImg from "../../../../../../../assets/RecyclingIcon.svg";
+import {FormValues} from "../../../../../../../types";
 
-const InfoDonatedThings = ({formValues}) => {
+const InfoDonatedThings = ({formValues}: FormValues) => {
     return (
         <div className='step5_item'>
             <h3 className='step5_item_title'>Oddajesz:</h3>

@@ -32,7 +32,7 @@ const GivePageSteps = ({step, setStep}: GivePageStepsProps) => {
     const [formErrors, setFormErrors] = useState({});
     // const [isSubmit, setIsSubmit] = useState(false);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const {name, value} = e.target;
         setFormValues({...formValues, [name]: value})
         setFormErrors({})

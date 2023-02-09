@@ -1,6 +1,7 @@
 import React from 'react';
+import {StepFormValue} from "../../../../../../../types";
 
-const SpecificLocalizationForm = ({handleChange, formValues}) => {
+const SpecificLocalizationForm = ({handleChange, formValues}: StepFormValue) => {
     return (
         <div className='givePageStepItem_item item_step3'>
             <label>Wpisz nazwę konkretnej organizacji (opcjonalnie)</label>

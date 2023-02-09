@@ -1,6 +1,12 @@
 import React from 'react';
+import {GivePageFormValues, HandleCheckbox} from "../../../../../../../../types";
 
-const HelpItem = ({handleChangeCheckbox, formValues, helpItem}) => {
+type HelpItemProps = HandleCheckbox & {
+    helpItem: string,
+    formValues: GivePageFormValues
+}
+
+const HelpItem = ({handleChangeCheckbox, formValues, helpItem}: HelpItemProps) => {
     return (
         <div className='item_step3_box_item' >
             <input

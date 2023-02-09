@@ -1,8 +1,9 @@
 import React from 'react';
 import AddressForm from "./AddressForm/AddressForm";
 import DateForm from "./DateForm/DateForm";
+import {StepBasicValue} from "../../../../../../types";
 
-const Step4 = ({handleChange, formValues, formErrors}) => {
+const Step4 = ({handleChange, formValues, formErrors}: StepBasicValue) => {
     return (
         <div className='givePageStepItem'>
             <p className='givePageStepItem_steps'>Krok 4/4</p>

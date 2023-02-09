@@ -2,8 +2,10 @@ import React from 'react';
 import InfoPickUpAddress from "./InfoPickUpAddress/InfoPickUpAddress";
 import InfoDonatedThings from "./InfoDonatedThings/InfoDonatedThings";
 import InfoPickUpDate from "./InfoPickUpDate/InfoPickUpDate";
+import {FormValues} from "../../../../../../types";
 
-const Step5 = ({formValues}) => {
+
+const Step5 = ({formValues}: FormValues) => {
 
     return (
         <div className='givePageStepItem step5'>

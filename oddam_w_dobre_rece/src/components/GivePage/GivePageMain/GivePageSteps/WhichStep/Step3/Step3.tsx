@@ -2,8 +2,11 @@ import React from 'react';
 import LocalizationForm from "./LocalizationForm/LocalizationForm";
 import HelpGroupsForm from "./HelpGroupsForm/HelpGroupsForm";
 import SpecificLocalizationForm from "./SpecificLocalizationForm/SpecificLocalizationForm";
+import {HandleCheckbox, StepBasicValue} from "../../../../../../types";
 
-const Step3 = ({handleChange, formValues,  handleChangeCheckbox, formErrors}) => {
+type Step3Props = StepBasicValue & HandleCheckbox
+
+const Step3 = ({handleChange, formValues,  handleChangeCheckbox, formErrors}: Step3Props) => {
 
     return (
         <div className='givePageStepItem'>

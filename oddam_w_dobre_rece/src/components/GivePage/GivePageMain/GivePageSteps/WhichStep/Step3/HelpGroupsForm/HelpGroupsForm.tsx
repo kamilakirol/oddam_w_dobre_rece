@@ -1,8 +1,13 @@
 import React from 'react';
 import {listHelpGroups} from "../directoryStep3";
 import HelpItem from "./HelpItem/HelpItem";
+import {GivePageFormValues, HandleCheckbox} from "../../../../../../../types";
 
-const HelpGroupsForm = ({handleChangeCheckbox, formValues}) => {
+type HelpGroupsFormProps = HandleCheckbox & {
+    formValues: GivePageFormValues
+}
+
+const HelpGroupsForm = ({handleChangeCheckbox, formValues}: HelpGroupsFormProps ) => {
     return (
         <div className='givePageStepItem_item item_step3'>
             <p className='item_step3_title'>Komu chcesz pomóc?</p>

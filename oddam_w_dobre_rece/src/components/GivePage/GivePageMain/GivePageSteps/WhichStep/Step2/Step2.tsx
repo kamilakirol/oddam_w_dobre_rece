@@ -1,7 +1,9 @@
 import React from 'react';
 import NumberBagsForm from "./NumberBagsForm/NumberBagsForm";
+import {StepBasicValue} from "../../../../../../types";
 
-const Step2 = ({handleChange, formValues, formErrors}) => {
+
+const Step2 = ({handleChange, formValues, formErrors}: StepBasicValue) => {
 
     return (
         <div className='givePageStepItem'>

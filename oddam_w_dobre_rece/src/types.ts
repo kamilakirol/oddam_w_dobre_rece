@@ -1,3 +1,5 @@
+import {ChangeEvent} from "react";
+
 export type ContentFoundationsList = {
     id: number,
     name: string,
@@ -33,3 +35,21 @@ export type GivePageFormValues = {
     timeValue: string,
     comments: string
 }
+
+export type FormValues = {
+    formValues: GivePageFormValues
+}
+
+export type HandleCheckbox =  {
+    handleChangeCheckbox: (e: ChangeEvent<HTMLInputElement>) => void
+}
+
+export type StepErrorsValue = {
+    formErrors:Partial<GivePageFormValues>
+}
+
+export type StepFormValue = FormValues  & {
+    handleChange:(e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void
+}
+
+export type StepBasicValue = StepFormValue & StepErrorsValue

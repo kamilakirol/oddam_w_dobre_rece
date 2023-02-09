@@ -1,18 +1,14 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import Step1 from "./Step1/Step1";
 import Step2 from "./Step2/Step2";
 import Step3 from "./Step3/Step3";
 import Step4 from "./Step4/Step4";
 import Step5 from "./Step5/Step5";
 import Step6 from "./Step6/Step6";
-import {GivePageFormValues} from "../../../../../types";
+import {HandleCheckbox, StepBasicValue} from "../../../../../types";
 
-type WhichStepProps = {
-    step: number,
-    formValues: GivePageFormValues,
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void,
-    handleChangeCheckbox: (e: ChangeEvent<HTMLInputElement>) => void,
-    formErrors: Partial<GivePageFormValues>
+type WhichStepProps = StepBasicValue & HandleCheckbox & {
+    step: number
 }
 
 const WhichStep = ({step, formValues, handleChange,  handleChangeCheckbox, formErrors} : WhichStepProps) => {

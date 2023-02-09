@@ -1,7 +1,8 @@
 import React from 'react';
 import numBagsDictionary from "../numBagsDictionary";
+import {StepFormValue} from "../../../../../../../types";
 
-const NumberBagsForm = ({formValues, handleChange}) => {
+const NumberBagsForm = ({formValues, handleChange}: StepFormValue) => {
     return (
         <div className='givePageStepItem_item'>
             <label>

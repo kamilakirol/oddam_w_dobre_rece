@@ -3,7 +3,7 @@ import GivePageHeader from './GivePageHeader/GivePageHeader'
 import GivePageSteps from "./GivePageSteps/GivePageSteps";
 
 const GivePageMain = () => {
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(4);
 
     return (
         <>
