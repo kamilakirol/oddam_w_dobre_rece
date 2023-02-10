@@ -2,12 +2,12 @@ import {
     createBrowserRouter,
     RouterProvider
 } from "react-router-dom";
-import Home from "./components/Dashboard/Home/Home";
-import LoginPage from "./components/Dashboard/LoginPage/LoginPage";
-import Dashboard from "./components/Dashboard/Dashboard";
-import RegistrationPage from "./components/Dashboard/RegistrationPage/RegistrationPage";
-import LogOutPage from "./components/Dashboard/LogOutPage/LogOutPage";
-import GivePage from "./components/GivePage/GivePage";
+import Home from "./components/Main/Home/Home";
+import Login from "./components/Main/Login/Login";
+import Main from "./components/Main/Main";
+import Registration from "./components/Main/Registration/Registration";
+import Logout from "./components/Main/Logout/Logout";
+import Things from "./components/Things/Things";
 import FirebaseAuth from "./FirebaseAuth";
 
 
@@ -20,7 +20,7 @@ function App() {
 
                 {
                     path:"/",
-                    element: <Dashboard/>,
+                    element: <Main/>,
                     children: [
                         {
                             path: "/",
@@ -28,21 +28,21 @@ function App() {
                         },
                         {
                             path: "logowanie",
-                            element: <LoginPage/>
+                            element: <Login/>
                         },
                         {
                             path: "rejestracja",
-                            element: <RegistrationPage/>
+                            element: <Registration/>
                         },
                         {
                             path:"wylogowano",
-                            element: <LogOutPage/>
+                            element: <Logout/>
                         }
                     ]
                 },
                 {
                     path:'oddaj-rzeczy',
-                    element: <GivePage/>
+                    element: <Things/>
                 }
             ]
         }

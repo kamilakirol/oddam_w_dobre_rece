@@ -1,0 +1,16 @@
+.logout {
+  padding-top: 123px;
+
+  &_btn {
+    padding: 13px 17px;
+
+    &::after {
+      left:-30%;
+      top: -30%;
+    }
+
+    &:hover::after {
+      left: 105% ;
+    }
+  }
+}

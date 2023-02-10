@@ -14,7 +14,7 @@
 @import "settings/givePageStepItemBase";
 
 
-@import "../components/Navigation/navigation";
-@import "../components/Dashboard/Home/home";
-@import "../components/Dashboard/LogOutPage/logOutPage";
-@import "../components/GivePage/givePage";
+@import "../components/common/Header/header";
+@import "../components/Main/Home/home";
+@import "../components/Main/Logout/logout";
+@import "../components/Things/things";

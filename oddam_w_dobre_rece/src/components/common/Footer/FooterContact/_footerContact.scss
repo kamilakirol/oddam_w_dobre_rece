@@ -1,0 +1,23 @@
+@import "FooterContactForm/footerContactForm";
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  width: 100%;
+
+  &_box {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  @include mateebook {
+    align-items: flex-end;
+    padding-top: 150px;
+
+    &_box {
+      width: 500px;
+    }
+  }
+}

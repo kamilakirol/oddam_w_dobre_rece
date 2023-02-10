@@ -1,0 +1,41 @@
+@import "ThingsMainFormSteps/Step1/step1";
+@import "ThingsMainFormSteps/Step2/step2";
+@import "ThingsMainFormSteps/Step3/step3";
+@import "ThingsMainFormSteps/Step4/step4";
+@import "ThingsMainFormSteps/Step5/step5";
+@import "ThingsMainFormSteps/Step6/step6";
+
+.thingsMainForm_box {
+  @include fullWidth;
+  padding: 0 20px;
+
+
+  @include mateebook {
+    background-image: url("../../../../assets/TeddyBearImg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+  }
+
+  &_btn {
+    background-color: transparent;
+    color: black;
+    padding: 13px 30px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom:50px;
+
+    &:first-of-type {
+      margin-right: 30px;
+    }
+
+    &::after {
+      top:-15%;
+      left:-30%;
+    }
+  }
+
+  @include mateebook {
+    padding-left: 100px;
+  }
+}
